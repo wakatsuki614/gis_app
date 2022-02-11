@@ -1,0 +1,12 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "team": "New York Yankees"
+    },
+    {
+      "id": 2,
+      "team": "Boston Red Sox"
+    }
+  ]
+}

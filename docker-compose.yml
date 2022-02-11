@@ -1,0 +1,10 @@
+version: "3"
+services:
+  json-server:
+    build: ./json-server
+    container_name: json-test-server
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./json-server/data.json:/data/data.json
+    command: json-server --watch data.json --host 0.0.0.0
