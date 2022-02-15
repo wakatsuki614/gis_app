@@ -16,7 +16,6 @@ development:
   <<: *default
   database: myapp_development
   host: db
-  username: root
   password: password
 
 # Warning: The database defined as "test" will be erased and
@@ -26,7 +25,6 @@ test:
   <<: *default
   database: myapp_test
   host: db
-  username: root
   password: password
 
 production:
