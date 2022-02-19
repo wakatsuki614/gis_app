@@ -1,0 +1,114 @@
+/* ====== index =====
+1. HOME
+  1.1 HEADER
+  1.2 MAIN
+
+/*================= 1. HOME ==================*/
+/*=== 1.1 HEADER ===*/
+header {
+  background: #fff;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 10px 20px 15px;
+  border-bottom: solid 1px #374149;
+}
+
+.biginner {
+  margin: 0.375rem 0.75rem;
+}
+
+.biginner-font-size {
+  font-size: 25px;
+  margin: -5px 10px;
+}
+
+.biginner .biginner-font-size::before {
+  content: url("https://www.seikatsu-guide.com/img/icon/beginner.png");
+  display: inline-block;
+  vertical-align: middle;
+  transform: scale(0.6);
+}
+
+.button-font-size {
+  font-size: 20px;
+  margin: -5px 10px;
+}
+
+/*=== 1.2 MAIN ===*/
+.wrap_home {
+  overflow: hidden;
+}
+
+.background {
+  background-image: url("3881852_m.jpg");
+  background-position: center 15%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 630px;
+}
+
+.concept-text {
+  left: 40%;
+  top: 20%;
+}
+
+.concept-text-title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.keyword-search {
+  top: 60%;
+  right: 10%;
+  justify-content: end;
+}
+
+.main_home {
+  background: #f3f3f3;
+}
+
+.search-by-region {
+  left: 10%;
+  top: 5%;
+  background-color: white;
+  border-radius: 15px;
+  max-width: 535px;
+}
+
+.seotext_00 {
+  text-decoration:underline;
+  text-decoration-color:yellow;
+  text-underline-offset: -0.2em;
+  text-decoration-thickness: 5px
+}
+
+.inline-block_home {
+  margin-right: 10px;
+}
+
+.new-information {
+  width: 310px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.ranking {
+  background-color: white;
+  border-radius: 15px;
+  width: 310px;
+}
+
+.ranking-title {
+  position: relative;
+}
+
+.ranking-title::after {
+  content: "👑";
+  display: inline-block;
+  vertical-align: middle;
+  transform: scale(1.2);
+  position: absolute;
+  bottom: 2px;
+  right: 5px;
+}
