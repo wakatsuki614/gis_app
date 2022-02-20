@@ -1,0 +1,21 @@
+<%= form_for(@user) do |f| %>
+  <div class="form-group label_user_new mt-4">
+    <%= f.label :name, '名前' %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="form-group label_user_new">
+    <%= f.label :email, 'メールアドレス' %>
+    <%= f.email_field :email, class: 'form-control' %>
+  </div>
+  <div class="form-group label_user_new">
+    <%= f.label :password, 'パスワード' %>
+    <%= f.password_field :password, class: 'form-control' %>
+  </div>
+  <div class="form-group label_user_new">
+    <%= f.label :password_confirmation, 'パスワード（確認）' %>
+    <%= f.password_field :password_confirmation, class: 'form-control' %>
+  </div>
+  <div class="submit_user_new mt-4">
+    <%= f.submit '登録する', class: 'btn btn-primary btn-block', style: 'width: 400px;' %>
+  </div>
+<% end %>
