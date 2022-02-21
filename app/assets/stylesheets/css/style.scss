@@ -2,8 +2,9 @@
 1. HOME
   1.1 HEADER
   1.2 MAIN
+2. SESSION
 
-/*================= 1. HOME ==================*/
+/*=== 1. HOME ===*/
 /*=== 1.1 HEADER ===*/
 header {
   background: #fff;
@@ -64,6 +65,10 @@ header {
   justify-content: end;
 }
 
+.search-btn {
+  border-radius: 0.25rem
+}
+
 .main_home {
   background: #f3f3f3;
 }
@@ -111,4 +116,13 @@ header {
   position: absolute;
   bottom: 2px;
   right: 5px;
+}
+
+/*=== 2. SESSION ===*/
+.device_frame {
+  max-width: 600px;
+  padding: 24px;
+  margin: 36px auto 0;
+  background-color: white;
+  border-radius: 4px;
 }
