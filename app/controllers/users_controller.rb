@@ -1,8 +1,4 @@
 class UsersController < ApplicationController
-  def show
-    @user = User.find(params[:id])
-  end
-
   def new
     @user = User.new
   end
@@ -11,11 +7,11 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      flash[:success] = '新しいユーザーを登録しました。'
-      redirect_to @user
+      session[:user_id] = @user.id
+      redirect_to root_url
     else
-      flash.now[:danger] = 'ユーザーの登録に失敗しました。'
-      render :new
+      flash[:danger] = 'ユーザーの登録に失敗しました。'
+      redirect_to signup_path
     end
   end
 
@@ -28,11 +24,11 @@ class UsersController < ApplicationController
 
     if current_user == @user
       if @user.update(user_params)
-        flash[:success] = 'ユーザー情報を編集しました。'
-        render :edit
+        flash[:success] = 'アカウント情報を更新しました。'
+        redirect_to edit_user_path
       else
-        flash.now[:danger] = 'ユーザー情報の編集に失敗しました。'
-        render :edit
+        flash[:danger] = 'アカウント情報の更新に失敗しました。'
+        redirect_to edit_user_path
       end
     else
       redirect_to root_url
