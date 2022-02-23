@@ -1,10 +1,6 @@
 <!-- FLASH -->
-<div class="text-center alert-success">
-  <%= flash[:success] %>
-</div>
-<div class="text-center alert-danger">
-  <%= flash[:danger] %>
-</div>
+<%= render 'shared/flash_success' %>
+<%= render 'shared/flash_danger' %>
 
 <!-- VIEW -->
 <div class="device_frame border">
@@ -26,8 +22,6 @@
       <%= f.label :password_confirmation, "パスワード（確認）" %>
       <%= f.password_field :password_confirmation, class: "form-control" %>
     </div>
-    <div>
-      <%= f.submit "アカウント編集を完了する", class: 'btn btn-primary btn-block my-3 form-control' %>
-    </div>
+    <%= f.submit "アカウント編集を完了する", class: 'btn btn-primary my-3 form-control' %>
   <% end %>
 </div>

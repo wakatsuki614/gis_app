@@ -1,7 +1,5 @@
 <!-- FLASH -->
-<div class="text-center alert-danger">
-  <%= flash[:danger] %>
-</div>
+<%= render 'shared/flash_danger' %>
 
 <!-- VIEW -->
 <div class="device_frame border">
@@ -15,11 +13,12 @@
       <%= f.label :password, "パスワード" %>
       <%= f.password_field :password, class: "form-control" %>
     </div>
-    <div>
-      <%= f.submit "ログイン", class: "btn btn-primary btn-block my-3 form-control" %>
-    </div>
+    <%= f.submit "ログイン", class: "btn btn-primary my-3 form-control" %>
   <% end %>
   <div class="text-center">
     <a href="/signup" class="text-decoration-none">新しいアカウントを作成</a>
   </div>
+</div>
+<div class="device_frame border">
+  <%= link_to "ゲストログイン", guest_login_path, method: :post, class: "btn btn-warning form-control" %>
 </div>
