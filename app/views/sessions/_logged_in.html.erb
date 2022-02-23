@@ -1,0 +1,16 @@
+<button type="button" class="btn btn-warning me-4">
+  <p class="button-font-size text-white">スクール登録</p>
+</button>
+<div class="ms-auto p-2 bd-highlight d-flex align-items-center">
+  <div class="dropdown__header">
+    <button type="button" class="dropdown__btn" id="dropdown__btn">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="dropdown__body">
+      <ul class="dropdown__list">
+        <li class="dropdown__item"><%= link_to 'アカウント設定', edit_user_path(current_user), class: "dropdown__item-link" %></li>
+        <li class="dropdown__item"><%= link_to "ログアウト", logout_path, method: :delete, class: "dropdown__item-link" %></li>
+      </ul>
+    </div>
+  </div>
+</div>
