@@ -64,3 +64,5 @@ group :production do
 end
 
 gem 'mysql2'
+gem 'carrierwave'
+gem 'rmagick'

@@ -39,6 +39,7 @@
 yarn-debug.log*
 .yarn-integrity
 
-vendor/
+vendor/bundle
 app/assets/images
 test/
+public/uploads/
