@@ -55,9 +55,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   def filename
     super.chomp(File.extname(super)) + '.jpg'
-  end
 
-  def filename
     if original_filename.present?
       time = Time.now
       name = time.strftime('%Y%m%d%H%M%S') + '.jpg'
