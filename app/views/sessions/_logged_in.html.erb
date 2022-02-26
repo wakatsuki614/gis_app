@@ -8,7 +8,7 @@
     </button>
     <div class="dropdown__body">
       <ul class="dropdown__list">
-        <li class="dropdown__item"><%= link_to "登録済スクール", edit_school_path(current_user), class: "dropdown__item-link" %></li>
+        <li class="dropdown__item"><%= link_to "登録済スクール", schools_path, class: "dropdown__item-link" %></li>
         <li class="dropdown__item"><%= link_to "アカウント設定", edit_user_path(current_user), class: "dropdown__item-link" %></li>
         <li class="dropdown__item"><%= link_to "ログアウト", logout_path, method: :delete, class: "dropdown__item-link" %></li>
       </ul>

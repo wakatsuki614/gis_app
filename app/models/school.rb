@@ -5,7 +5,7 @@ class School < ApplicationRecord
   validates :school_email, presence: true, length: { maximum: 255 },
                            format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
                            uniqueness: { case_sensitive: false }
-  validates :phone,        presence: true, length: { maximum: 15 },
+  validates :phone,        presence: true,
                            format: { with: /\A\d{1,4}-{0,1}\d{1,4}-{0,1}\d{4}\z/ }
   validates :address,      presence: true, length: { maximum: 50 }
   validates :introduce,    length: { maximum: 255 }

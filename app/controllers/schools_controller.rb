@@ -1,4 +1,8 @@
 class SchoolsController < ApplicationController
+  def index
+    @schools = School.all
+  end
+
   def new
     @school = School.new
   end
@@ -17,9 +21,7 @@ class SchoolsController < ApplicationController
   def edit
     @school = School.find(params[:id])
 
-    if @school.user == current_user
-      render 'edit'
-    else
+    unless @school.user == current_user
       redirect_to root_url
     end
   end
