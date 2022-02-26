@@ -1,0 +1,39 @@
+<!-- FLASH -->
+<%= render 'shared/flash_success' %>
+<%= render 'shared/flash_danger' %>
+
+<!-- VIEW -->
+<div class="device_frame border">
+  <h2 class="mb-3">スクール情報編集</h2>
+  <%= form_for(@school) do |f| %>
+    <div class="form-group mb-3">
+      <%= f.label :school_name, 'スクール名' %>
+      <%= f.text_field :school_name, class: "form-control" %>
+    </div>
+    <div class="form-group mb-3">
+      <%= f.label :school_email, 'メールアドレス' %>
+      <%= f.email_field :school_email, class: "form-control" %>
+    </div>
+    <div class="form-group mb-3">
+      <%= f.label :phone, '電話番号' %>
+      <%= f.telephone_field :phone, class: "form-control" %>
+    </div>
+    <div class="form-group mb-3">
+      <%= f.label :address, '所在地' %>
+      <%= f.text_field :address, class: "form-control" %>
+    </div>
+    <div class="form-group mb-3">
+      <%= f.label :introduce, 'スクール紹介' %>
+      <%= f.text_area :introduce, :size => "80x5", class: "form-control" %>
+    </div>
+    <div class="form-group mb-3">
+      <%= f.label :home_page, 'ホームページ' %>
+      <%= f.url_field :home_page, class: "form-control" %>
+    </div>
+    <div class="form-group mb-3">
+      <%= f.label :image, 'スクール画像' %>
+      <%= f.file_field :image, class: "d-block" %>
+    </div>
+    <%= f.submit 'スクール情報の編集を完了する', class: "btn btn-primary my-3 form-control" %>
+  <% end %>
+</div>

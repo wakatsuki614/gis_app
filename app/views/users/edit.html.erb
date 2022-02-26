@@ -7,21 +7,21 @@
   <h2 class="mb-3">アカウント設定</h2>
   <%= form_for(@user) do |f| %>
     <div class="form-group mb-3">
-      <%= f.label :name, "名前" %>
+      <%= f.label :name, '名前' %>
       <%= f.text_field :name, class: "form-control" %>
     </div>
     <div class="form-group mb-3">
-      <%= f.label :email, "メールアドレス" %>
+      <%= f.label :email, 'メールアドレス' %>
       <%= f.email_field :email, class: "form-control" %>
     </div>
     <div class="form-group mb-3">
-      <%= f.label :password, "パスワード" %>
+      <%= f.label :password, 'パスワード' %>
       <%= f.password_field :password, class: "form-control" %>
     </div>
     <div class="form-group mb-3">
-      <%= f.label :password_confirmation, "パスワード（確認）" %>
+      <%= f.label :password_confirmation, 'パスワード（確認）' %>
       <%= f.password_field :password_confirmation, class: "form-control" %>
     </div>
-    <%= f.submit "アカウント編集を完了する", class: 'btn btn-primary my-3 form-control' %>
+    <%= f.submit 'アカウント編集を完了する', class: "btn btn-primary my-3 form-control" %>
   <% end %>
 </div>

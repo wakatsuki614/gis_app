@@ -1,5 +1,5 @@
 <button type="button" class="btn btn-warning me-4">
-  <p class="button-font-size text-white">スクール登録</p>
+  <p class="button-font-size"><%= link_to "スクール登録", new_school_path, class: "text-white text-decoration-none" %></p>
 </button>
 <div class="ms-auto p-2 bd-highlight d-flex align-items-center">
   <div class="dropdown__header">
@@ -8,7 +8,8 @@
     </button>
     <div class="dropdown__body">
       <ul class="dropdown__list">
-        <li class="dropdown__item"><%= link_to 'アカウント設定', edit_user_path(current_user), class: "dropdown__item-link" %></li>
+        <li class="dropdown__item"><%= link_to "登録済スクール", schools_path, class: "dropdown__item-link" %></li>
+        <li class="dropdown__item"><%= link_to "アカウント設定", edit_user_path(current_user), class: "dropdown__item-link" %></li>
         <li class="dropdown__item"><%= link_to "ログアウト", logout_path, method: :delete, class: "dropdown__item-link" %></li>
       </ul>
     </div>
