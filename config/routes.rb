@@ -4,12 +4,13 @@ Rails.application.routes.draw do
 
   get 'signup', to: 'users#new'
   get 'login',  to: 'sessions#new'
+  get 'search', to: 'schools#search'
 
   post 'login',       to: 'sessions#create'
   post 'guest_login', to: 'guest_sessions#create'
 
   delete 'logout', to: 'sessions#destroy'
 
-  resources :users, only: [:create, :edit, :update]
-  resources :schools
+  resources :users,   only: [:new, :create, :edit, :update]
+  resources :schools, only: [:index, :new, :create, :edit, :update, :search]
 end

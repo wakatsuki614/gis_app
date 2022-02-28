@@ -5,6 +5,8 @@
   1.3 MAIN
 2. SESSION
 3. SCHOOL
+  3.1 INDEX
+  3.2 SEARCH
 
 /*=== 1. HOME ===*/
 /*=== 1.1 HEADER ===*/
@@ -131,7 +133,23 @@ header {
   justify-content: end;
 }
 
-.search-btn {
+.text_field_search {
+  width: 400px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.submit_search {
   border-radius: 0.25rem
 }
 
@@ -194,6 +212,7 @@ header {
 }
 
 /*=== 3. SCHOOL ===*/
+/*=== 3.1 INDEX ===*/
 table{
   width: 100%;
   border-collapse:separate;
@@ -228,4 +247,24 @@ table td{
 
 table td:last-child{
   border-right: 1px solid black;
+}
+
+/*=== 3.2 SEARCH ===*/
+.school-list {
+  border-top: 5px solid #dedff0;
+}
+
+.list_search {
+  list-style: none;
+}
+
+.list_search_link {
+  bottom: 5%;
+  right: 10%;
+  position: absolute;
+}
+
+.search-side-menu {
+  margin: -1rem;
+  border-bottom: 1px solid #dee2e6;
 }

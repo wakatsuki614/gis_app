@@ -42,6 +42,12 @@ class SchoolsController < ApplicationController
     end
   end
 
+  def search
+    @schools = School.search(params[:keyword])
+    @keyword = params[:keyword]
+    render 'search'
+  end
+
   private
 
   def school_params
