@@ -3,6 +3,10 @@ class SchoolsController < ApplicationController
     @schools = School.all
   end
 
+  def show
+    @school = School.find(params[:id])
+  end
+
   def new
     @school = School.new
   end
