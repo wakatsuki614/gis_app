@@ -7,6 +7,7 @@
 3. SCHOOL
   3.1 INDEX
   3.2 SEARCH
+  3.3 SCHOOL DETAILS
 
 /*=== 1. HOME ===*/
 /*=== 1.1 HEADER ===*/
@@ -267,4 +268,14 @@ table td:last-child{
 .search-side-menu {
   margin: -1rem;
   border-bottom: 1px solid #dee2e6;
+}
+
+/*=== 3.3 SCHOOL DETAILS ===*/
+.contact-information {
+  margin-top: 60px;
+}
+
+.rmarker {
+  background: #ffcdd2;
+  font-size: 20px;
 }

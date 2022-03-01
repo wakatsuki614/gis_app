@@ -19,7 +19,7 @@
             <ul class="col list_search position-relative">
               <li style="font-size: 30px;" class="mt-4 mb-3"><%= school.school_name %></li>
               <li style="font-size: 20px;" class="mt-3"><%= school.address %></li>
-              <li class="list_search_link"><%= link_to "スクール詳細", "/"%></li>
+              <li class="list_search_link"><%= link_to "スクール詳細", school_path(school) %></li>
             </ul>
           </div>
         <% end %>
