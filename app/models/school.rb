@@ -13,4 +13,8 @@ class School < ApplicationRecord
   belongs_to :user
 
   mount_uploader :image, ImageUploader
+
+  def self.search(keyword)
+    where(["school_name like? OR address like?", "%#{keyword}%", "%#{keyword}%"])
+  end
 end
