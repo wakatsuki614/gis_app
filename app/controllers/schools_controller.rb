@@ -3,10 +3,6 @@ class SchoolsController < ApplicationController
     @schools = School.all
   end
 
-  def show
-    @school = School.find(params[:id])
-  end
-
   def new
     @school = School.new
   end
@@ -44,12 +40,6 @@ class SchoolsController < ApplicationController
     else
       redirect_to root_url
     end
-  end
-
-  def search
-    @schools = School.search(params[:keyword])
-    @keyword = params[:keyword]
-    render 'search'
   end
 
   private
