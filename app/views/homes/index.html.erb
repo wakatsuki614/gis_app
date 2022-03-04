@@ -87,8 +87,20 @@
     </div>
     <div class="col-4">
       <div class="new-information p-3 ms-5 mt-4">
-        <h5 class="mb-3 new-information-title">新着情報</h5>
-        <img style="width:100%;" src="https://www.jacpa.co.jp/wp-content/themes/jacpa-new/img/extra-sports/mv.jpg" alt="">
+        <h5 class="mb-3 new-information-title px-1">新着情報</h5>
+        <% @schools.each do |school| %>
+          <div>
+            <% if school.image? %>
+              <%= image_tag school.image.url, size: '278x208' %>
+            <% else%>
+              <%= image_tag 'noimage.jpg', size: '278x208' %>
+            <%end%>
+          </div>
+          <div class="px-1">
+            <div class="mt-2"><%= school.school_name %></div>
+            <div><%= school.address %></div>
+          </div>
+        <% end %>
       </div>
       <div class="ranking p-3 ms-5 mt-4">
         <h5 class="mb-3 ranking-title">注目のスポーツランキング</h5>
