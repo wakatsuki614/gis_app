@@ -15,6 +15,6 @@ class School < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   def self.search(keyword)
-    where(["school_name like? OR address like?", "%#{keyword}%", "%#{keyword}%"])
+    where("school_name like? OR address like?", "%#{keyword}%", "%#{keyword}%")
   end
 end
