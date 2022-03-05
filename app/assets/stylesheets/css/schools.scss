@@ -1,0 +1,73 @@
+/* ===== index =====
+2. SCHOOL
+  2.1 INDEX
+  2.2 SEARCH
+  2.3 SCHOOL DETAILS
+
+/*=== 2. SCHOOL ===*/
+/*=== 2.1 INDEX ===*/
+table{
+  width: 100%;
+  border-collapse:separate;
+  border-spacing: 0;
+}
+
+table th:first-child{
+  border-radius: 5px 0 0 0;
+}
+
+table th:last-child{
+  border-radius: 0 5px 0 0;
+  border-right: 1px solid black;
+}
+
+table th{
+  text-align: center;
+  background: #DDDDDD;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+}
+
+table td{
+  text-align: center;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top:none;
+  padding: 10px 0;
+}
+
+table td:last-child{
+  border-right: 1px solid black;
+}
+
+/*=== 2.2 SEARCH ===*/
+.school-list {
+  border-top: 5px solid #dedff0;
+}
+
+.list_search {
+  list-style: none;
+}
+
+.list_search_link {
+  bottom: 5%;
+  right: 10%;
+  position: absolute;
+}
+
+.search-side-menu {
+  margin: -1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/*=== 2.3 SCHOOL DETAILS ===*/
+.contact-information {
+  margin-top: 60px;
+}
+
+.rmarker {
+  background: #ffcdd2;
+  font-size: 20px;
+}

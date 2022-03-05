@@ -1,13 +1,8 @@
-/* ====== index =====
+/* ===== index =====
 1. HOME
   1.1 HEADER
   1.2 DROPDOWN MENU
   1.3 MAIN
-2. SESSION
-3. SCHOOL
-  3.1 INDEX
-  3.2 SEARCH
-  3.3 SCHOOL DETAILS
 
 /*=== 1. HOME ===*/
 /*=== 1.1 HEADER ===*/
@@ -110,7 +105,7 @@ header {
   overflow: hidden;
 }
 
-.background {
+.background_home {
   background-image: url("3881852_m.jpg");
   background-position: center 15%;
   background-repeat: no-repeat;
@@ -201,81 +196,4 @@ header {
   position: absolute;
   bottom: 2px;
   right: 5px;
-}
-
-/*=== 2. SESSION ===*/
-.device_frame {
-  max-width: 600px;
-  padding: 24px 50px;
-  margin: 36px auto 0;
-  background-color: white;
-  border-radius: 4px;
-}
-
-/*=== 3. SCHOOL ===*/
-/*=== 3.1 INDEX ===*/
-table{
-  width: 100%;
-  border-collapse:separate;
-  border-spacing: 0;
-}
-
-table th:first-child{
-  border-radius: 5px 0 0 0;
-}
-
-table th:last-child{
-  border-radius: 0 5px 0 0;
-  border-right: 1px solid black;
-}
-
-table th{
-  text-align: center;
-  background: #DDDDDD;
-  border-left: 1px solid black;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  padding: 10px 0;
-}
-
-table td{
-  text-align: center;
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
-  border-top:none;
-  padding: 10px 0;
-}
-
-table td:last-child{
-  border-right: 1px solid black;
-}
-
-/*=== 3.2 SEARCH ===*/
-.school-list {
-  border-top: 5px solid #dedff0;
-}
-
-.list_search {
-  list-style: none;
-}
-
-.list_search_link {
-  bottom: 5%;
-  right: 10%;
-  position: absolute;
-}
-
-.search-side-menu {
-  margin: -1rem;
-  border-bottom: 1px solid #dee2e6;
-}
-
-/*=== 3.3 SCHOOL DETAILS ===*/
-.contact-information {
-  margin-top: 60px;
-}
-
-.rmarker {
-  background: #ffcdd2;
-  font-size: 20px;
 }
