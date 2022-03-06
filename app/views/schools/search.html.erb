@@ -1,11 +1,11 @@
 <div class="container px-5">
   <div class="row">
-    <div class="col-8 mx-auto">
+    <div class="col_search mx-auto">
       <h3 class="my-4 ms-3 p-1"><%= @schools.count %> 件の検索結果</h3>
     </div>
   </div>
   <div class="row">
-    <div class="col-8 mx-auto">
+    <div class="col_search mx-auto">
       <% if @schools.count == 0 %>
         <div class="text-center py-4">
           <span style="font-size: 20px;">検索条件にヒットするスクールがありませんでした。</span>
@@ -15,14 +15,14 @@
           <div class="row pt-3 mb-5 school-list">
             <div class="col text-center">
               <% if school.image? %>
-                <%= image_tag school.image.url, size: '320x240' %>
+                <%= image_tag school.image.url, class: "image-size_search" %>
               <% else%>
-                <%= image_tag 'noimage.jpg', size: '320x240' %>
+                <%= image_tag 'noimage.jpg', class: "image-size_search" %>
               <%end%>
             </div>
             <ul class="col list_search position-relative">
-              <li style="font-size: 30px;" class="mt-4 mb-3"><%= school.school_name %></li>
-              <li style="font-size: 20px;" class="mt-3"><%= school.address %></li>
+              <li class="font_school_name_search"><%= school.school_name %></li>
+              <li class="font_address_search"><%= school.address %></li>
               <li class="list_search_link"><%= link_to "スクール詳細", school_path(school) %></li>
             </ul>
           </div>

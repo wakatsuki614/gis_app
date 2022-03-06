@@ -2,7 +2,7 @@
 <%= render 'shared/flash_danger' %>
 
 <!-- VIEW -->
-<div class="device_frame border">
+<div class="device_frame">
   <h2 class="mb-3">ログイン</h2>
   <%= form_for(:session, url: login_path) do |f| %>
     <div class="form-group mb-3">
@@ -19,6 +19,6 @@
     <a href="/signup" class="text-decoration-none">新しいアカウントを作成</a>
   </div>
 </div>
-<div class="device_frame border">
+<div class="device_frame_guest">
   <%= link_to "ゲストログイン", guest_login_path, method: :post, class: "btn btn-warning form-control" %>
 </div>

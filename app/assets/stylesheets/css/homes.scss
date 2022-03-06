@@ -1,11 +1,11 @@
 /* ===== index =====
-1. HOME
-  1.1 HEADER
-  1.2 DROPDOWN MENU
-  1.3 MAIN
+2. HOME
+  2.1 HEADER
+  2.2 DROPDOWN MENU
+  2.3 MAIN
 
-/*=== 1. HOME ===*/
-/*=== 1.1 HEADER ===*/
+/*=== 2. HOME ===*/
+/*=== 2.1 HEADER ===*/
 header {
   background: #fff;
   position: relative;
@@ -36,7 +36,7 @@ header {
   margin: -5px 10px;
 }
 
-/*=== 1.2 DROPDOWN MENU ===*/
+/*=== 2.2 DROPDOWN MENU ===*/
 .dropdown__header {
   margin: 0 0 0 auto;
   position: relative;
@@ -100,7 +100,7 @@ header {
   background: #fbfbfb;
 }
 
-/*=== 1.3 MAIN ===*/
+/*=== 2.3 MAIN ===*/
 .wrap_home {
   overflow: hidden;
 }
