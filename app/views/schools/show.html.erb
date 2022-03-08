@@ -1,52 +1,40 @@
 <div class="container px-5">
-  <h3 class="my-4 ms-3 p-1"><%= @school.school_name %></h3>
   <div class="row">
-    <div class="col">
+    <div class="col_search mx-auto">
+      <h3 class="my-4 ms-3 p-1"><%= @school.school_name %></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col_search mx-auto">
       <div class="pt-3 px-5 school-list">
-        <div class="text-center">
+        <div class="image_school_show">
           <% if @school.image? %>
-            <%= image_tag @school.image.url, size: '320x240' %>
+            <%= image_tag @school.image.url, class: "image-size_school_show" %>
           <% else%>
-            <%= image_tag 'noimage.jpg', size: '320x240' %>
+            <%= image_tag 'noimage.jpg', class: "image-size_school_show" %>
           <%end%>
         </div>
-        <div class="mx-4 my-3 px-4">
+        <div class="school_information_show">
           <span class="fw-bold">＜所在地＞</span><br>
-          <div style="font-size: 20px;"><%= @school.address %></div>
+          <div class="font_information_show"><%= @school.address %></div>
         </div>
-        <div class="mx-4 my-3 px-4">
+        <div class="school_information_show">
           <span class="fw-bold">＜スクール紹介＞</span><br>
-          <div style="font-size: 20px;">体験入学実施中！オリジナルバスタオルをプレゼント！</div>
+          <div class="font_information_show">体験入学実施中！オリジナルバスタオルをプレゼント！</div>
         </div>
-        <div class="mx-4 px-4 contact-information text-center">
+        <div class="contact-information">
           <div class="mb-3">
             <span class="rmarker">↓お問い合わせはこちらから↓</span>
           </div>
           <div class="mb-3">
             <span class="fw-bold">電話番号：</span>
-            <div style="font-size: 20px;"><%= @school.phone %></div>
+            <div class="font_information_show"><%= @school.phone %></div>
           </div>
           <div class="">
             <span class="fw-bold">メールアドレス：</span>
-            <div style="font-size: 20px;"><%= @school.school_email %></div>
+            <div class="font_information_show"><%= @school.school_email %></div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="col-4">
-      <div style="border-radius: 4px;" class="border p-3">
-        <h3 class="text-center mb-3 search-side-menu py-2">会員ログイン</h3>
-        <%= form_for(:session, url: login_path) do |f| %>
-          <div class="form-group">
-            <%= f.label :email, 'メールアドレス' %>
-            <%= f.email_field :email, class: "form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :password, 'パスワード' %>
-            <%= f.password_field :password, class: "form-control" %>
-          </div>
-          <%= f.submit 'ログイン', class: "btn btn-primary mt-3 form-control" %>
-        <% end %>
       </div>
     </div>
   </div>

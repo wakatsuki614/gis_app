@@ -1,0 +1,231 @@
+/* ===== index =====
+5. SCHOOL
+  5.1 INDEX
+  5.2 SEARCH
+  5.3 SCHOOL DETAILS
+
+/*=== 5. SCHOOL ===*/
+/*=== 5.1 INDEX ===*/
+table{
+  width: 100%;
+  border-collapse:separate;
+  border-spacing: 0;
+}
+
+table th:first-child{
+  border-radius: 5px 0 0 0;
+}
+
+table th:last-child{
+  border-radius: 0 5px 0 0;
+  border-right: 1px solid black;
+}
+
+table th{
+  text-align: center;
+  background: #DDDDDD;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 10px 0;
+}
+
+.school_name_index {
+  width: 30%;
+}
+@media (max-width: 1200px) and (min-width: 768px) {
+  .school_name_index {
+    width: 25%;
+  }
+}
+@media (max-width: 767px) {
+  .school_name_index {
+    width: 50%;
+  }
+}
+
+.address_index {
+  width: 40%;
+}
+@media (max-width: 767px) {
+  .address_index {
+    display: none;
+  }
+}
+
+.school_updated_at_index {
+  width: 20%;
+}
+@media (max-width: 1200px) and (min-width: 768px) {
+  .school_updated_at_index {
+    width: 25%;
+  }
+}
+@media (max-width: 767px) {
+  .school_updated_at_index {
+    width: 35%;
+  }
+}
+
+.letter-spacing_strftime {
+  letter-spacing: 0.5em;
+}
+
+table td{
+  text-align: center;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top:none;
+  padding: 10px 0;
+}
+
+table td:last-child{
+  border-right: 1px solid black;
+}
+
+/*=== 5.2 SEARCH ===*/
+.col_search {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+}
+@media (max-width: 1200px) and (min-width: 768px) {
+  .col_search {
+    flex: 1 0 0%;
+  }
+}
+@media (max-width: 767px) {
+  .col_search {
+    flex: 1 0 0%;
+  }
+}
+
+.school-list {
+  border-top: 5px solid #dedff0;
+}
+
+.image-size_search {
+  width: 320px;
+  height: 240px;
+}
+@media (max-width: 1200px) and (min-width: 768px) {
+  .image-size_search {
+    width: 280px;
+    height: 210px;
+  }
+}
+@media (max-width: 767px) {
+  .image-size_search {
+    width: 120px;
+    height: 90px;
+  }
+}
+
+.list_search {
+  list-style: none;
+}
+
+.font_school_name_search {
+  font-size: 30px;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  .font_school_name_search {
+    font-size: 20px;
+    margin-top: -0.25rem;
+    margin-bottom: 0.25rem;
+    margin-left: -0.5rem;
+  }
+}
+
+.font_address_search {
+  font-size: 20px;
+  margin-top: 1rem;
+}
+@media (max-width: 767px) {
+  .font_address_search {
+    font-size: 16px;
+    margin-top: 0.25rem;
+    margin-left: -0.5rem;
+  }
+}
+
+.list_search_link {
+  bottom: 5%;
+  right: 10%;
+  position: absolute;
+}
+@media (max-width: 767px) {
+  .list_search_link {
+    bottom: -30%;
+  }
+}
+
+/*=== 5.3 SCHOOL DETAILS ===*/
+.image_school_show {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .image_school_show {
+    margin: 0 -30px;
+  }
+}
+
+.image-size_school_show {
+  width: 320px;
+  height: 240px;
+}
+@media (max-width: 767px) {
+  .image-size_school_show {
+    width: 240px;
+    height: 180px;
+  }
+}
+
+.school_information_show {
+  margin: 1rem 1.5rem ;
+  padding: 0 1.5rem;
+}
+@media (max-width: 1200px) and (min-width: 768px) {
+  .school_information_show {
+    margin: 1rem 3rem ;
+    padding: 0 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .school_information_show {
+    margin: 1rem -3rem ;
+    padding: 0 -3rem;
+  }
+}
+
+.font_information_show {
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  .font_information_show {
+    font-size: 16px;
+  }
+}
+
+.contact-information {
+  margin: 60px 1.5rem 0;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .contact-information {
+    margin: 50px -3rem 0;
+    padding: 0 -3rem;
+  }
+}
+
+.rmarker {
+  background: #ffcdd2;
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  .rmarker {
+    font-size: 16px;
+  }
+}

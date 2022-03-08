@@ -1,6 +1,18 @@
-<button type="button" class="btn btn-warning me-4">
-  <p class="button-font-size"><%= link_to "スクール登録", new_school_path, class: "text-white text-decoration-none" %></p>
+<!-- PC表示 -->
+<button type="button" class="btn school_registration_btn">
+  <p class="button-font-size"><%= link_to "スクール登録", new_school_path, class: "header-link" %></p>
 </button>
+<button type="button" class="btn school_registration_btn">
+  <p class="button-font-size"><%= link_to "登録済スクール", schools_path, class: "header-link" %></p>
+</button>
+<button type="button" class="btn school_registration_btn">
+  <p class="button-font-size"><%= link_to "アカウント設定", edit_user_path(current_user), class: "header-link" %></p>
+</button>
+<button type="button" class="btn school_registration_btn">
+  <p class="button-font-size"><%= link_to "ログアウト", logout_path, method: :delete, class: "header-link" %></p>
+</button>
+
+<!-- タブレット・スマホ表示 -->
 <div class="ms-auto p-2 bd-highlight d-flex align-items-center">
   <div class="dropdown__header">
     <button type="button" class="dropdown__btn" id="dropdown__btn">
@@ -8,6 +20,7 @@
     </button>
     <div class="dropdown__body">
       <ul class="dropdown__list">
+        <li class="dropdown__item"><%= link_to "スクール登録", new_school_path, class: "dropdown__item-link" %></li>
         <li class="dropdown__item"><%= link_to "登録済スクール", schools_path, class: "dropdown__item-link" %></li>
         <li class="dropdown__item"><%= link_to "アカウント設定", edit_user_path(current_user), class: "dropdown__item-link" %></li>
         <li class="dropdown__item"><%= link_to "ログアウト", logout_path, method: :delete, class: "dropdown__item-link" %></li>
