@@ -10,6 +10,8 @@ Capybara.register_driver :selenium_chrome_headless do |app|
   options.add_argument('--window-size=390,844')
 
   driver = Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+
+  driver
 end
 
 Capybara.javascript_driver = :selenium_chrome_headless
