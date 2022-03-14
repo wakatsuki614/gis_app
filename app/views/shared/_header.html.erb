@@ -1,0 +1,23 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <p class="gis-logo">GI Sports</p>
+      </a>
+      <div class="collapse navbar_home" id="navbarSupportedContent">
+        <div class="navbar-nav ms-auto mb-lg-0">
+          <form class="d-flex">
+            <a href="/" class="link-dark biginner mt-2">
+              <p class="biginner-font-size">はじめての方</p>
+            </a>
+            <% if logged_in? %>
+              <%= render 'sessions/logged_in'%>
+            <% else %>
+              <%= render 'sessions/not_logged_in' %>
+            <% end %>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
