@@ -1,3 +1,6 @@
+![](https://img.shields.io/github/languages/code-size/wakatsuki614/gis_app)
+![](https://img.shields.io/circleci/build/github/wakatsuki614/gis_app)
+
 # GI Sports
 
 ## GI Sportsとは
@@ -21,7 +24,7 @@ GI Sportsに登録されているスポーツ教室を検索から探すこと�
 
 ### スクール登録について
 会員登録後、ヘッダーにある「スクール登録」からスクール情報を登録することができます。  
-ご登録いただいたスクール情報の編集も同じくヘッダーの「登録済スクール」より行えます。    
+ご登録いただいたスクール情報の編集も同じくヘッダーの「登録済スクール」より行えます。  
 ご登録には下記を入力していただく必要があります。  
 ・スクール名(必須)  
 ・メールアドレス(必須)  
@@ -32,14 +35,17 @@ GI Sportsに登録されているスポーツ教室を検索から探すこと�
 ・スクール画像(任意)
 
 ### 検索機能について
-- 「キーワード検索」  
-スクール名、所在地のいずれかに部分一致したスクール情報を検索結果画面へ出力します。  
-- 「地域で検索」  
+
+#### 「キーワード検索」  
+スクール名、所在地のいずれかに部分一致したスクール情報を検索結果画面へ出力します。
+
+#### 「地域で検索」  
 検索結果画面に出力される条件はキーワード検索と同じです。
 
 ### 検索結果画面について
-検索結果に表示されるスクール情報は、上から更新日が新しい順に表示されます。  
+検索結果に表示されるスクール情報は、上から更新日が新しい順に表示されます。
 <img width="960" alt="demo5" src="https://user-images.githubusercontent.com/91055744/158724318-9c39d950-1c1e-4235-846f-8dc704c22aed.png">
+
 ※更新日につきましては、「登録済スクール」の最終更新日よりご確認いただけます。
 <img width="961" alt="demo4" src="https://user-images.githubusercontent.com/91055744/158724578-24bc1e95-714a-4c1c-8b2f-179751b7b1c1.png">
 
@@ -50,20 +56,20 @@ GI Sportsに登録されているスポーツ教室を検索から探すこと�
 ![erd](https://user-images.githubusercontent.com/91055744/158635486-74253841-1b31-4c33-8fa8-f753ffd17e3e.jpg)
 
 ## 使用技術
-- Ruby 2.7.4p191  
-- Ruby on Rails 6.1.4.6  
-- MySQL  
+- Ruby 2.7.4p191
+- Ruby on Rails 6.1.4.6
+- MySQL
 - Docker/Docker Compose
-- CircleCI  
+- CircleCI
 - RSpec
 
 ## CircleCI CI/CD
 GitHubへのpush時に、RSpecとRuboCopが自動で実行されます。
 
 ## 機能一覧
-- 会員登録機能  
-- ログイン機能、ゲストログイン機能  
-- スクール登録機能  
+- 会員登録機能
+- ログイン機能、ゲストログイン機能
+- スクール登録機能
 - 検索機能
 
 ## テスト
