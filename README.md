@@ -1,24 +1,84 @@
-# README
+![](https://img.shields.io/github/languages/code-size/wakatsuki614/gis_app)
+![](https://img.shields.io/circleci/build/github/wakatsuki614/gis_app)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# GI Sports
 
-Things you may want to cover:
+## GI Sportsとは
+GI Sportsに登録されているスポーツ教室を検索から探すことができるサイトです。  
+ご自身で運営されているスポーツ教室を登録することもできます。  
+レスポンシブ対応しておりますので、スマートフォンからもご確認いただけます。
+<img width="960" alt="demo1" src="https://user-images.githubusercontent.com/91055744/158723557-bcaaa0f4-ee7d-4606-8aac-c566059da304.png">
 
-* Ruby version
+## 当サイトを作成した背景
+当サイトから地元にあるスポーツ教室の情報を知り、スポーツを始めるきっかけになってほしいという思いを込めて作成しました。  
+現在私は地元にあるテニススクールへ通っています。  
+当時そのテニススクールの情報はホームページしかなく、まとめサイトからは見つけることができませんでした。  
+ホームページは存在するがまとめサイトにはない、ホームページも存在せず近所の人たちしか認知していないようなスポーツ教室があることも知ってほしいのです。
 
-* System dependencies
+## 当サイトの使い方
 
-* Configuration
+### 会員登録について
+ヘッダーにある**新規会員登録**から会員登録を行えます。  
+名前・メールアドレス・パスワードの登録はそれぞれ必須となっております。  
+同じくヘッダーにある**アカウント設定**より会員情報の更新を行えます。
 
-* Database creation
+### スクール登録について
+会員登録後、ヘッダーにある**スクール登録**からスクール情報を登録することができます。  
+ご登録いただいたスクール情報の編集も同じくヘッダーの**登録済スクール**より行えます。  
+ご登録には下記を入力していただく必要があります。  
+・スクール名(必須)  
+・メールアドレス(必須)  
+・電話番号(必須)  
+・所在地(必須)  
+・スクール紹介(任意)  
+・ホームページ(任意)  
+・スクール画像(任意)
 
-* Database initialization
+### 検索機能について
 
-* How to run the test suite
+#### 「キーワード検索」  
+スクール名、所在地のいずれかに部分一致したスクール情報を検索結果画面へ出力します。
 
-* Services (job queues, cache servers, search engines, etc.)
+#### 「地域で検索」  
+検索結果画面に出力される条件はキーワード検索と同じです。
 
-* Deployment instructions
+### 検索結果画面について
+検索結果に表示されるスクール情報は、上から更新日が新しい順に表示されます。
+<img width="960" alt="demo5" src="https://user-images.githubusercontent.com/91055744/158724318-9c39d950-1c1e-4235-846f-8dc704c22aed.png">
 
-* ...
+※更新日につきましては、**登録済スクール**の最終更新日よりご確認いただけます。
+<img width="961" alt="demo4" src="https://user-images.githubusercontent.com/91055744/158724578-24bc1e95-714a-4c1c-8b2f-179751b7b1c1.png">
+
+### 新着情報について
+当サイトへ直近で登録されたスクール情報を表示します。
+
+## ER図
+![erd](https://user-images.githubusercontent.com/91055744/158635486-74253841-1b31-4c33-8fa8-f753ffd17e3e.jpg)
+
+## 使用技術
+- Ruby 2.7.4p191
+- Ruby on Rails 6.1.4.6
+- MySQL
+- Docker/Docker Compose
+- CircleCI
+- RSpec
+
+## CircleCI CI/CD
+GitHubへのpush時に、RSpecとRuboCopが自動で実行されます。
+
+## 機能一覧
+- 会員登録機能
+- ログイン機能、ゲストログイン機能
+- スクール登録機能
+- 検索機能
+
+## テスト
+- RSpec
+  - Request Spec
+  - Feature Spec
+  - System Spec
+
+## こだわったポイント
+検索結果画面に表示されるスクール情報の順番にこだわりました。  
+更新日が新しい順に上から表示される仕様となっています。  
+検索結果の上位に表示される方が目に留まりやすく、更新するために定期的にスクール運営の方もサイトへ訪れていただけるのではないかと考えました。
