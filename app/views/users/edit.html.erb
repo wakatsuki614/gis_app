@@ -27,4 +27,9 @@
     </div>
     <%= f.submit 'アカウント編集を完了する', class: "btn btn-primary my-3 form-control" %>
   <% end %>
+  <% unless @user.email == "guest@exapmle.com" then %>
+    <div class="text-center">
+      <%= link_to "退会する", user_path(current_user.id), method: :delete, class: "delete-function", "data-confirm" => "登録されているスクール情報も削除されます。本当に退会しますか？" %>
+    </div>
+  <% end %>
 </div>

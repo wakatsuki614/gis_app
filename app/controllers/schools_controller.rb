@@ -46,10 +46,15 @@ class SchoolsController < ApplicationController
     end
   end
 
+  def destroy
+    @school = School.find(params[:id]).destroy
+    flash[:notice] = 'スクール情報を削除しました。'
+    redirect_to schools_path
+  end
+
   def search
     @schools = School.search(params[:keyword])
     @keyword = params[:keyword]
-
     render 'search'
   end
 
