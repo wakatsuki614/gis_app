@@ -8,5 +8,5 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  has_many :schools
+  has_many :schools, :dependent => :destroy
 end

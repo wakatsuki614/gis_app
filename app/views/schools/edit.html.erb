@@ -39,4 +39,9 @@
     </div>
     <%= f.submit 'スクール情報の編集を完了する', class: "btn btn-primary my-3 form-control" %>
   <% end %>
+  <% unless @school.user.email == "guest@exapmle.com" then %>
+    <div class="text-center">
+      <%= link_to "スクール情報削除", school_path(@school.id), method: :delete, class: "delete-function", "data-confirm" => "本当に削除しますか？" %>
+    </div>
+  <% end %>
 </div>
