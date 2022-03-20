@@ -10,31 +10,31 @@
   <h2 class="mb-3">スクール情報編集</h2>
   <%= form_for(@school) do |f| %>
     <div class="form-group mb-3">
-      <%= f.label :school_name, 'スクール名' %>
+      <%= f.label :school_name, 'スクール名（必須）' %>
       <%= f.text_field :school_name, class: "form-control" %>
     </div>
     <div class="form-group mb-3">
-      <%= f.label :school_email, 'メールアドレス' %>
+      <%= f.label :school_email, 'メールアドレス（必須）' %>
       <%= f.email_field :school_email, class: "form-control" %>
     </div>
     <div class="form-group mb-3">
-      <%= f.label :phone, '電話番号' %>
+      <%= f.label :phone, '電話番号（必須）' %>
       <%= f.telephone_field :phone, class: "form-control" %>
     </div>
     <div class="form-group mb-3">
-      <%= f.label :address, '所在地' %>
+      <%= f.label :address, '所在地（必須）' %>
       <%= f.text_field :address, class: "form-control" %>
     </div>
     <div class="form-group mb-3">
-      <%= f.label :introduce, 'スクール紹介' %>
+      <%= f.label :introduce, 'スクール紹介（任意）' %>
       <%= f.text_area :introduce, :size => "80x5", class: "form-control" %>
     </div>
     <div class="form-group mb-3">
-      <%= f.label :home_page, 'ホームページ' %>
+      <%= f.label :home_page, 'ホームページ（任意）' %>
       <%= f.url_field :home_page, class: "form-control" %>
     </div>
     <div class="form-group mb-3">
-      <%= f.label :image, 'スクール画像' %>
+      <%= f.label :image, 'スクール画像（任意）' %>
       <%= f.file_field :image, class: "d-block" %>
     </div>
     <%= f.submit 'スクール情報の編集を完了する', class: "btn btn-primary my-3 form-control" %>
