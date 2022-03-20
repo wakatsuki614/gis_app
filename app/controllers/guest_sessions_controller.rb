@@ -6,6 +6,7 @@ class GuestSessionsController < ApplicationController
     end
 
     session[:user_id] = user.id
+    flash[:notice] = "ようこそ、#{current_user.name}さん！"
     redirect_to root_url
   end
 end
