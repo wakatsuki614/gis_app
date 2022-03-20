@@ -13,6 +13,7 @@ RSpec.describe "Sessions", type: :system do
       fill_in "session[password]", with: user.password
       find(".login-test").click
       expect(current_path).to eq root_path
+      expect(page).to have_content "ようこそ、#{user.name}さん！"
     end
 
     it 'ログインに失敗するとログイン画面が再度読み込まれる' do
