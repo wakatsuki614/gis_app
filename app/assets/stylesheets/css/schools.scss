@@ -162,6 +162,16 @@ table td:last-child{
 }
 
 /*=== 6.3 SCHOOL DETAILS ===*/
+.page-title_school {
+  margin: 1.5rem 0 1.5rem 1rem;
+  padding: 0.25rem;
+}
+@media (max-width: 767px) {
+  .page-title_school {
+    margin: 1rem 0 1rem 1rem;
+  }
+}
+
 .image_school_show {
   text-align: center;
 }
@@ -213,9 +223,14 @@ table td:last-child{
   padding: 0 1.5rem;
   text-align: center;
 }
+@media (max-width: 1200px) and (min-width: 768px) {
+  .contact-information {
+    margin: 50px 1.5rem 0;
+  }
+}
 @media (max-width: 767px) {
   .contact-information {
-    margin: 50px -3rem 0;
+    margin: 40px -3rem 0;
     padding: 0 -3rem;
   }
 }
