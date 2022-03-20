@@ -11,27 +11,27 @@
   <%= form_for(@school) do |f| %>
     <div class="form-group mb-3">
       <%= f.label :school_name, 'スクール名（必須）' %>
-      <%= f.text_field :school_name, class: "form-control" %>
+      <%= f.text_field :school_name, placeholder: "GIスクール", class: "form-control" %>
     </div>
     <div class="form-group mb-3">
       <%= f.label :school_email, 'メールアドレス（必須）' %>
-      <%= f.email_field :school_email, class: "form-control" %>
+      <%= f.email_field :school_email, placeholder: "gisports@example.com", class: "form-control" %>
     </div>
     <div class="form-group mb-3">
       <%= f.label :phone, '電話番号（必須）' %>
-      <%= f.telephone_field :phone, class: "form-control" %>
+      <%= f.telephone_field :phone, placeholder: "半角数字で入力してください", class: "form-control" %>
     </div>
     <div class="form-group mb-3">
       <%= f.label :address, '所在地（必須）' %>
-      <%= f.text_field :address, class: "form-control" %>
+      <%= f.text_field :address, placeholder: "所在地を入力", class: "form-control" %>
     </div>
     <div class="form-group mb-3">
       <%= f.label :introduce, 'スクール紹介（任意）' %>
-      <%= f.text_area :introduce, :size => "80x5", class: "form-control" %>
+      <%= f.text_area :introduce, :size => "80x5", placeholder: "255文字以内で入力してください", class: "form-control" %>
     </div>
     <div class="form-group mb-3">
       <%= f.label :home_page, 'ホームページ（任意）' %>
-      <%= f.url_field :home_page, class: "form-control" %>
+      <%= f.url_field :home_page, placeholder: "URLを入力", class: "form-control" %>
     </div>
     <div class="form-group mb-3">
       <%= f.label :image, 'スクール画像（任意）' %>
