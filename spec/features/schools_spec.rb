@@ -55,6 +55,10 @@ RSpec.feature "Schools", type: :feature do
       expect(page).to have_content school.introduce
     end
 
+    scenario 'ホームページ表示テスト' do
+      expect(page).to have_content school.home_page
+    end
+
     scenario '電話番号表示テスト' do
       expect(page).to have_content school.phone
     end
