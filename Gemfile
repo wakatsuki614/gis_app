@@ -69,5 +69,6 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'pry-rails'
 gem 'fog-aws'
-gem "aws-sdk-s3", require: false
+gem 'aws-sdk-s3', require: false
 gem 'dotenv-rails'
+gem 'geocoder'

@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2022_02_23_073044) do
     t.string "address"
     t.string "phone"
     t.string "home_page"
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["school_email"], name: "index_schools_on_school_email", unique: true
