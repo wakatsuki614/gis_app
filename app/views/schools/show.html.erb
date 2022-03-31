@@ -19,16 +19,19 @@
           <%end%>
         </div>
         <div class="school_information_show">
-          <span class="fw-bold">＜所在地＞</span><br>
-          <div class="font_information_show"><%= @school.address %></div>
-        </div>
-        <div class="school_information_show">
           <span class="fw-bold">＜スクール紹介＞</span><br>
           <div class="font_information_show"><%= @school.introduce %></div>
         </div>
         <div class="school_information_show">
           <span class="fw-bold">＜ホームページ＞</span><br>
           <div class="font_information_show"><%= @school.home_page %></div>
+        </div>
+        <div class="school_information_show">
+          <span class="fw-bold">＜所在地＞</span><br>
+          <div class="font_information_show"><%= @school.address %></div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div id="map"></div>
         </div>
         <div class="contact-information">
           <div class="mb-3">
@@ -47,3 +50,31 @@
     </div>
   </div>
 </div>
+
+<!-- MAP -->
+<script type="text/javascript">
+  function initMap() {
+    var test = { lat: <%= @school.latitude %>, lng: <%= @school.longitude %> };
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: test
+    });
+    var transitLayer = new google.maps.TransitLayer();
+    transitLayer.setMap(map);
+    var contentString = '所在地：<%= @school.address %>';
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+    var marker = new google.maps.Marker({
+      position:test,
+      map: map,
+      title: contentString
+    });
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
+  }
+</script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap">
+</script>

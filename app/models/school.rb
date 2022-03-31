@@ -17,4 +17,8 @@ class School < ApplicationRecord
   def self.search(keyword)
     where("school_name like? OR address like?", "%#{keyword}%", "%#{keyword}%").order(updated_at: :desc)
   end
+
+  geocoded_by :address
+
+  after_validation :geocode, if: :address_changed?
 end

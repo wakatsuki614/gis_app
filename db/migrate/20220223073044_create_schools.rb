@@ -9,6 +9,8 @@ class CreateSchools < ActiveRecord::Migration[6.1]
       t.string :address
       t.string :phone
       t.string :home_page
+      t.float  :latitude
+      t.float  :longitude
 
       t.index ["school_email"], unique: true
 
