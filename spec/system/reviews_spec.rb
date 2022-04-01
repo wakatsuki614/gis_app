@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Reviews", type: :system do
-  let(:user)  { create(:user) }
+  let(:user) { create(:user) }
   let(:school) { create(:school) }
 
   describe "GET /schools/:id" do
