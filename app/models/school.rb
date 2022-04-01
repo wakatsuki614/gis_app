@@ -12,6 +12,8 @@ class School < ApplicationRecord
 
   belongs_to :user
 
+  has_many :reviews
+
   mount_uploader :image, ImageUploader
 
   def self.search(keyword)

@@ -1,11 +1,11 @@
 /* ===== index =====
-6. SCHOOL
-  6.1 INDEX
-  6.2 SEARCH
-  6.3 SCHOOL DETAILS
+7. SCHOOL
+  7.1 INDEX
+  7.2 SEARCH
+  7.3 SCHOOL DETAILS
 
-/*=== 6. SCHOOL ===*/
-/*=== 6.1 INDEX ===*/
+/*=== 7. SCHOOL ===*/
+/*=== 7.1 INDEX ===*/
 table{
   width: 100%;
   border-collapse:separate;
@@ -83,7 +83,7 @@ table td:last-child{
   border-right: 1px solid black;
 }
 
-/*=== 6.2 SEARCH ===*/
+/*=== 7.2 SEARCH ===*/
 .col_search {
   flex: 0 0 auto;
   width: 66.66666667%;
@@ -161,7 +161,7 @@ table td:last-child{
   }
 }
 
-/*=== 6.3 SCHOOL DETAILS ===*/
+/*=== 7.3 SCHOOL DETAILS ===*/
 .page-title_school {
   margin: 1.5rem 0 1.5rem 1rem;
   padding: 0.25rem;
