@@ -7,15 +7,15 @@
       <span class="review0-text">コメント投稿がありません。</span>
     </div>
   <% else %>
-    <div class="review-background-container review-background-container-rgb">
-      <% reviews.each do |review| %>
+    <% reviews.each do |review| %>
+      <div class="review-background-container review-background-container-rgb">
         <div class="mb-1">
           <span class="fw-bold"><%= review.user.name %></span>
           <span class="writing-date_review">&ensp;<%= review.created_at.strftime("%Y年%-m月%-d日") %></span>
         </div>
         <%= review.body %>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   <% end %>
   <% if logged_in? %>
     <div class="review-background-container review-background-container-efefef">

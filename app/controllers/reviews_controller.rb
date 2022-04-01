@@ -9,11 +9,6 @@ class ReviewsController < ApplicationController
     redirect_to school_path(@review.school_id)
   end
 
-  def destroy
-    @review = Review.find(params[:id]).destroy
-    redirect_to school_path(@review.school_id)
-  end
-
   private
 
   def review_params

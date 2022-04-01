@@ -6,7 +6,7 @@ class SchoolsController < ApplicationController
   def show
     @school = School.find(params[:id])
     @review = Review.new
-    @reviews = @school.reviews.includes([:user])
+    @reviews = @school.reviews.includes([:user]).order(created_at: :desc)
   end
 
   def new
