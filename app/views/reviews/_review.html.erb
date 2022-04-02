@@ -15,6 +15,10 @@
         </div>
         <%= review.body %>
       </div>
+      <div class="likes">
+        <%= button_to '参考になった', review_likes_path(review) %>
+        <span class="likes_count">&nbsp;<%= review.likes.count %>人</span>
+      </div>
     <% end %>
   <% end %>
   <% if logged_in? %>

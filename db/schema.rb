@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_31_061156) do
+ActiveRecord::Schema.define(version: 2022_04_01_085837) do
+
+  create_table "likes", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "review_id", null: false
+    t.string "ip"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["review_id"], name: "index_likes_on_review_id"
+  end
 
   create_table "reviews", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -48,6 +56,7 @@ ActiveRecord::Schema.define(version: 2022_03_31_061156) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "likes", "reviews"
   add_foreign_key "reviews", "schools"
   add_foreign_key "reviews", "users"
   add_foreign_key "schools", "users"
