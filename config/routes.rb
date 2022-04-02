@@ -14,5 +14,8 @@ Rails.application.routes.draw do
   resources :beginners, only: [:index]
   resources :users,     only: [:new, :create, :edit, :update, :destroy]
   resources :schools,   only: [:index, :show, :new, :create, :edit, :update, :destroy, :search]
-  resources :reviews,   only: [:create, :destroy]
+
+  resources :reviews, only: [:new, :create] do
+    resources :likes, only: [:create]
+  end
 end

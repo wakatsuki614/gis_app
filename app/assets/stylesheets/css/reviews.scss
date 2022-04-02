@@ -68,6 +68,25 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
+.likes {
+  display: flex;
+  justify-content: end;
+  margin: -0.8rem 3rem 0;
+}
+@media (max-width: 767px) {
+  .likes {
+    margin: -0.7rem 0 0;
+  }
+}
+
+.likes_count {
+  padding: 0.1rem 0.3rem 0 0.1rem;
+  margin: 0 0.5rem 0 0.2rem;
+  background-color: #FFCC99;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+
 .review-background-container-efefef {
   background: #EFEFEF;
 }
