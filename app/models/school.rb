@@ -12,7 +12,7 @@ class School < ApplicationRecord
 
   belongs_to :user
 
-  has_many :reviews
+  has_many :reviews, :dependent => :destroy
 
   mount_uploader :image, ImageUploader
 
